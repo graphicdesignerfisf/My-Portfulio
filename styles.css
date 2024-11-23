@@ -1,0 +1,568 @@
+html {
+    font-family: sans-serif;
+    border: 20px;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0px;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    inline-size: none;
+    padding: 0%;
+}
+h1, h2,h3, h4, h5, h6 {
+    color: #1549e6;
+    margin: 20px 0 10; 
+}
+p {
+    margin: 0 0 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: lighter;
+}    
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#header:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1549e6;
+    text-decoration: none;
+    margin-right: 20px;
+    transition: color 0.3s;
+}
+
+#logo:hover {
+    color: #1549e6;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+    margin-right: 20px;
+}
+
+#navbar ul {
+    display: flex;
+    list-style-type: none;
+    margin-top: 0px;
+    padding: 0;
+}
+
+#navbar ul li {
+    margin-right: 20px;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: #1549e6;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#navbar ul li a:hover {
+    color: #1549e6;
+    transform: scale(1.1);
+}
+#welcome-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: rotate(360deg);
+}
+
+.btn-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn-box a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    color: #fff;
+    background-color: #1549e6;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.btn-box a:hover {
+    background-color: #ffffff;
+    transform: translateY(-5px);
+}
+.home-sci {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    animation: bounceIn 2s ease-in-out;
+}
+
+@keyframes bounceIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.home-sci a {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.home-sci a:hover {
+    color: #1549e6;
+    transform: rotate(15deg);
+}
+
+/* Project section */
+/* General styles */
+
+/* Project section */
+#achievement {
+    text-align: center;
+    padding: 50px 20px;
+    background: #1549e6; /* Semi-transparent background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    animation: fadeIn 2s ease-in-out;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Container styling */
+.container {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Achievement item styling */
+.achievement {
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent card background */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    flex: 1 1 calc(99.666% - 40px);
+    max-width: calc(99.666% - 40px);
+}
+
+.achievement a {
+    color: #ff7e5f;
+    font-size: 2em;
+    margin-bottom: 10px;
+    display: inline-block;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.achievement a:hover {
+    color: #feb47b;
+    transform: scale(1.1);
+}
+
+.achievement h2 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    color: #1549e6;
+}
+
+.achievement p {
+    color: #2c3e51;
+    font-size: 1em;
+    line-height: 1.5;
+    transition: color 0.3s;
+}
+
+.achievement p:hover {
+    color: #1549e6;
+}
+
+.achievement:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .achievement {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .achievement {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+/* Container */
+#service {
+    padding: 60px 0;
+    background-color: linear-gradient(to right, #ff7e5f, #feb47b);;
+  }
+  
+  .service .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Define the styles for the description list */
+  .service dl {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  /* Define the styles for the dt (title) */
+  .service dt {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 20px 0 10px;
+    color: #1549e6;
+  }
+  
+  /* Define the styles for the dd (description) */
+  .service dd {
+    font-size: 1rem;
+    color: #ffffff;
+    margin: 0 0 20px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .service dt {
+      font-size: 1.3rem;
+    }
+  
+    .service dd {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Add smooth hover effect for dt */
+  .service dt:hover {
+    color: #007BFF;
+    transition: color 0.3s ease-in-out;
+  }
+  /* Container for the project section */
+/* Container for the project section */
+/* General Styles */
+
+
+/* Project Section Styles */
+#project {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#project h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #007BFF;
+}
+
+/* Project Service Styles */
+.project-service {
+  flex: 1;
+  margin: 10px;
+  padding: 20px;
+  background: #feb47b;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.project-service h2 {
+  font-size: 1.8rem;
+  color: #1549e6;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.project-service ul {
+  list-style: none;
+  padding: 0;
+}
+
+.project-service li {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.project-service strong {
+  color: #000;
+}
+
+.project-service a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #007BFF;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.project-service a:hover {
+  background: #0056b3;
+}
+
+.project-service p {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
+}
+
+.project-service p a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.project-service p a:hover {
+  text-decoration: underline;
+}
+
+/* Flex Container */
+#project .project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #project {
+    padding: 10px;
+  }
+
+  .project-service {
+    padding: 15px;
+  }
+
+  .project-service h2 {
+    font-size: 1.5rem;
+  }
+
+  .project-service li {
+    font-size: 0.9rem;
+  }
+
+  .project-service a {
+    padding: 8px 15px;
+  }
+
+  #project .project-container {
+    flex-direction: column;
+  }
+}
+
+  /* Container for the contact section */
+/* Container for the contact section */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Contact Section Styles */
+#contact {
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+#contact h3 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+/* Social Links Styles */
+.home-sci {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.home-sci a {
+  display: flex;
+  align-items: center;
+  background: #1549e6;
+  padding: 10px 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s, transform 0.3s;
+}
+
+.home-sci a:hover {
+  background: #f4f4f4;
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+/* Contact Info Styles */
+.contact-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  margin: 10px 0;
+}
+
+.contact-info a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s;
+}
+
+.contact-info a:hover {
+  color: #1549e6;
+}
+
+/* Email Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+form input[type="email"] {
+  width: 80%;
+  max-width: 400px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+form input[type="email"]:focus {
+  border-color: #1549e6;
+  box-shadow: inset 0 2px 6px rgba(0, 123, 255, 0.5);
+}
+
+form input[type="submit"] {
+  background: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+form input[type="submit"]:hover {
+  background: #1549e6;
+  transform: translateY(-3px);
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply Animation */
+#contact {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  form input[type="email"] {
+    width: 90%;
+  }
+}
+  
+  
+    
+  
+
+
+ 
+
+
+
