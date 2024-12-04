@@ -2,25 +2,25 @@
 body {
   font-family: Arial, sans-serif;
   background: linear-gradient(to right, #ff7e5f, #feb47b);
-  margin-left: 20px;
-  margin-right: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  width: 700px;
+  margin: 0 20px;
+  padding: 0 20px;
+  max-width: 1400px;
 }
 
+/* Headings */
 h1, h2, h3, h4, h5, h6 {
   color: #1549e6;
   margin: 20px 0 10px;
 }
 
+/* Paragraphs */
 p {
   margin: 0 0 10px;
-  color: white;
+  color: #ffffff;
   font-size: 20px;
-  font-weight: wide;
 }
 
+/* Header */
 #header {
   display: flex;
   align-items: center;
@@ -35,6 +35,7 @@ p {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Logo */
 #logo {
   font-size: 24px;
   font-weight: bold;
@@ -44,11 +45,12 @@ p {
   transition: color 0.3s;
 }
 
+/* Navbar */
 #navbar ul {
   display: flex;
   list-style-type: none;
-  margin-top: 0px;
   padding: 0;
+  margin-top: 0;
 }
 
 #navbar ul li {
@@ -61,12 +63,15 @@ p {
   font-weight: bold;
   transition: color 0.3s ease, transform 0.3s ease;
 }
+
 #navbar ul li a:hover,
 #navbar ul li a#active {
   color: #1549e6;
   transform: scale(1.1);
   text-decoration: underline;
 }
+
+/* Welcome Section */
 #welcome-section {
   text-align: center;
   padding: 50px 20px;
@@ -77,16 +82,6 @@ p {
   animation: fadeIn 2s ease-in-out;
 }
 
-@keyframes fadeIn {
-  from {
-      opacity: 0;
-      transform: translateY(-20px);
-  }
-  to {
-      opacity: 1;
-      transform: translateY(0);
-  }
-}
 .profile-pic {
   width: 100px;
   height: auto;
@@ -94,15 +89,12 @@ p {
   margin-bottom: 20px;
   transition: transform 0.3s ease;
 }
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
+
 .profile-pic:hover {
   transform: rotate(360deg);
 }
+
+/* Buttons */
 .btn-box {
   display: flex;
   justify-content: center;
@@ -126,6 +118,7 @@ img {
   transform: translateY(-5px);
 }
 
+/* Social Media Icons */
 .home-sci {
   display: flex;
   justify-content: center;
@@ -156,7 +149,7 @@ img {
   transform: rotate(15deg);
 }
 
-/* Project Section */
+/* Achievement Section */
 #achievement {
   text-align: center;
   padding: 50px 20px;
@@ -169,16 +162,13 @@ img {
   margin: 0 auto;
 }
 
-/* Container styling */
 .container {
-  text-align: center;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
 }
 
-/* Achievement item styling */
 .achievement {
   background: rgba(255, 255, 255, 0.9);
   padding: 20px;
@@ -225,7 +215,6 @@ img {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive adjustments */
 @media (max-width: 900px) {
   .achievement {
       flex: 1 1 calc(50% - 20px);
@@ -240,6 +229,7 @@ img {
   }
 }
 
+/* Service Section */
 #service {
   padding: 60px 0;
   background: linear-gradient(to right, #ff7e5f, #feb47b);
@@ -270,7 +260,6 @@ img {
   margin: 0 0 20px;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .service dt {
       font-size: 1.3rem;
@@ -281,12 +270,12 @@ img {
   }
 }
 
-/* Add smooth hover effect for dt */
 .service dt:hover {
   color: #007BFF;
   transition: color 0.3s ease-in-out;
 }
-/* Project Section Styles */
+
+/* Project Section */
 #project {
   max-width: 1200px;
   margin: 0 auto;
@@ -299,10 +288,9 @@ img {
 #project h1 {
   text-align: center;
   margin-bottom: 40px;
-  color: #007BFF;
+  color: #1549e6;
 }
 
-/* Project Service Styles */
 .project-service {
   flex: 1;
   margin: 10px;
@@ -338,7 +326,7 @@ img {
   display: inline-block;
   margin-top: 20px;
   padding: 10px 20px;
-  background: #007BFF;
+  background: #1549e6;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -365,48 +353,30 @@ img {
   text-decoration: underline;
 }
 
-/* Flex Container */
-#project .project-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
   #project {
-    padding: 10px;
+      padding: 10px;
   }
 
   .project-service {
-    padding: 15px;
+      padding: 15px;
   }
 
   .project-service h2 {
-    font-size: 1.5rem;
+      font-size: 1.5rem;
   }
 
   .project-service li {
-    font-size: 0.9rem;
+      font-size: 0.9rem;
   }
 
   .project-service a {
-    padding: 8px 15px;
-  }
-
-  #project .project-container {
-    flex-direction: column;
+      padding: 8px 15px;
   }
 }
 
-  /* Container for the contact section */
-/* Container for the contact section */
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Contact Section Styles */
+/* Contact Section */
 #contact {
   padding: 40px;
   border-radius: 8px;
@@ -421,13 +391,14 @@ a {
   color: #ffffff;
 }
 
-/* Social Links Styles */
+/* Social Links */
 .home-sci {
   display: flex;
   justify-content: center;
   gap: 8px;
   margin-bottom: 10px;
 }
+
 .home-sci a {
   display: flex;
   align-items: center;
@@ -444,7 +415,7 @@ a {
   transform: translateY(-5px);
 }
 
-/* Contact Info Styles */
+/* Contact Info */
 .contact-info {
   text-align: center;
   margin-bottom: 20px;
@@ -462,10 +433,10 @@ a {
 }
 
 .contact-info a:hover {
-  color: #1549e6;
+  color: #ffffff;
 }
 
-/* Email Form Styles */
+/* Email Form */
 form {
   display: flex;
   flex-direction: column;
@@ -509,12 +480,12 @@ form input[type="submit"]:hover {
 /* Keyframes for Animations */
 @keyframes fadeIn {
   from {
-    opacity: 0;
-    transform: translateY(20px);
+      opacity: 0;
+      transform: translateY(20px);
   }
   to {
-    opacity: 1;
-    transform: translateY(0);
+      opacity: 1;
+      transform: translateY(0);
   }
 }
 
@@ -523,7 +494,7 @@ form input[type="submit"]:hover {
   animation: fadeIn 1s ease-in-out;
 }
 
-/* Responsive Design */
+/* Responsive Design for Small Screens */
 @media (max-width: 600px) {
   #header {
       padding: 5px 10px;
@@ -542,6 +513,7 @@ form input[type="submit"]:hover {
       width: 90%;
   }
 }
+
 @media (max-width: 600px) {
   h1, h2, h3, h4, h5, h6 {
       font-size: 1.2em;
@@ -552,7 +524,7 @@ form input[type="submit"]:hover {
       font-size: 16px;
   }
 }
- 
+
 
 
   
