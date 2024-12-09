@@ -10,6 +10,11 @@ body {
   background: linear-gradient(to right, #ff7e5f, #feb47b);
   margin: 0 20px;
   padding: 0 20px;
+  font-size: 1rem;
+  display: content;
+  width: 92rem;
+  flex-wrap: wrap;
+  height: auto;
 }
 
 /* Headings */
@@ -78,8 +83,9 @@ p {
 
 /* Welcome Section */
 #welcome-section {
-  
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   padding: 50px 20px;
   background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
   border-radius: 8px;
@@ -158,7 +164,9 @@ p {
 
 /* Achievement Section */
 #achievement {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 50px 20px;
   background: #1549e6;
   border-radius: 8px;
@@ -286,6 +294,9 @@ p {
 
 /* Project Section */
 #project {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
@@ -301,7 +312,7 @@ p {
 }
 
 .project-service {
-  flex: 1;
+  flex: 1px;
   margin: 10px;
   padding: 20px;
   background: #feb47b;
@@ -506,7 +517,7 @@ form input[type="submit"]:hover {
 }
 
 /* Responsive Design for Small Screens */
-@media (max-width: 600px) {
+@media (max-width: 760px) {
   #header {
       padding: 5px 10px;
   }
@@ -519,6 +530,10 @@ form input[type="submit"]:hover {
   .home-sci a {
       font-size: 15px;
       padding: 8px 10px;
+  }
+  .profile-pic {
+    width: 100px;
+    height: auto;
   }
 
   form input[type="email"] {
