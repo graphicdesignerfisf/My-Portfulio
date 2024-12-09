@@ -12,7 +12,7 @@ body {
   padding: 0 20px;
   font-size: 1rem;
   display: content;
-  width: 92rem;
+  min-width: 50rem;
   flex-wrap: wrap;
   height: auto;
 }
