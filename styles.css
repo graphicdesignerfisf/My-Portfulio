@@ -11,7 +11,7 @@ body {
   margin: 0 20px;
   padding: 0 20px;
   font-size: 1rem;
-  display: content;
+  display: block; /* Corrected display property */
   min-width: 50rem;
   flex-wrap: wrap;
   height: auto;
@@ -84,21 +84,26 @@ p {
 /* Welcome Section */
 #welcome-section {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: space-around;
   padding: 50px 20px;
   background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
   animation: fadeIn 2s ease-in-out;
-  flex-wrap: wrap;
+}
+
+#welcome-section-content {
+  text-align: center;
+  margin: 0;
 }
 
 .profile-pic {
   width: 100px;
   height: auto;
-  border-radius: 50%;
+  border-radius: 1rem;
   margin-bottom: 20px;
   transition: transform 0.3s ease;
 }
@@ -141,12 +146,12 @@ p {
 
 @keyframes bounceIn {
   from {
-      transform: scale(0.5);
-      opacity: 0;
+    transform: scale(0.5);
+    opacity: 0;
   }
   to {
-      transform: scale(1);
-      opacity: 1;
+    transform: scale(1);
+    opacity: 1;
   }
 }
 
@@ -164,9 +169,6 @@ p {
 
 /* Achievement Section */
 #achievement {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 50px 20px;
   background: #1549e6;
   border-radius: 8px;
@@ -175,7 +177,6 @@ p {
   animation: fadeIn 2s ease-in-out;
   max-width: 1200px;
   margin: 0 auto;
-  flex-wrap: wrap;
 }
 
 .container {
@@ -303,6 +304,7 @@ p {
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 5s ease-in-out;
 }
 
 #project h1 {
@@ -312,12 +314,19 @@ p {
 }
 
 .project-service {
-  flex: 1px;
+  flex: 1;
   margin: 10px;
   padding: 20px;
   background: #feb47b;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: slideIn 1s ease-in-out, fadeIn 2s;
+}
+
+.project-service:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .project-service h2 {
@@ -351,7 +360,6 @@ p {
   text-decoration: none;
   border-radius: 5px;
   transition: background 0.3s;
-  flex-wrap: wrap;
 }
 
 .project-service a:hover {
@@ -372,28 +380,52 @@ p {
 
 .project-service p a:hover {
   text-decoration: underline;
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Keyframes for Animations */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   #project {
-      padding: 10px;
+    padding: 10px;
+    flex-direction: column;
   }
 
   .project-service {
-      padding: 15px;
+    padding: 15px;
   }
 
   .project-service h2 {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 
   .project-service li {
-      font-size: 0.9rem;
+    font-size: 0.9rem;
   }
 
   .project-service a {
-      padding: 8px 15px;
+    padding: 8px 15px;
   }
 }
 
