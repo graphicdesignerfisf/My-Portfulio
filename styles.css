@@ -11,9 +11,8 @@ body {
   margin: 0 20px;
   padding: 0 20px;
   font-size: 1rem;
-  display: block; /* Corrected display property */
-  min-width: 50rem;
-  flex-wrap: wrap;
+  display: block; 
+  min-width: 40rem;
   height: auto;
 }
 
@@ -100,16 +99,11 @@ p {
   margin: 0;
 }
 
-.profile-pic {
+.welcome-section img {
   width: 100px;
   height: auto;
   border-radius: 1rem;
   margin-bottom: 20px;
-  transition: transform 0.3s ease;
-}
-
-.profile-pic:hover {
-  transform: rotate(360deg);
 }
 
 /* Buttons */
